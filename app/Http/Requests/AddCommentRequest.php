@@ -26,7 +26,7 @@ class AddCommentRequest extends FormRequest
         return [
             'post_id'   => 'required|exists:user_posts,id',
             'comment'   => 'required|string',
-            'parent_id' => 'exists:post_comments,id|hierarchy_lvl'
+            'parent_id' => 'exists:post_comments,id'
         ];
     }
 }
